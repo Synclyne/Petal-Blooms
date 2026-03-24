@@ -347,6 +347,28 @@ body {
   }
 }
 
+
+.see-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff4d6d;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.see-more-btn:hover {
+  background-color: #e63956;
+  transform: translateY(-2px);
+}
+
      /* OUR STORY */
 
 .our-story {

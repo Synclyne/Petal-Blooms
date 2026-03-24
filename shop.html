@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/86b537907d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+  <div class="nav-top">
+    <div class="logo">Petal & Bloom</div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for flowers, gifts..." />
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="nav-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nav-bottom">
+    <a href="#">Flowers</a>
+    <a href="#">Gift Hampers</a>
+    <a href="#">Her</a>
+    <a href="#">Him</a>
+  </nav>
+</header>
+
+
+<section class="shop">
+  <div class="shop-container">
+
+    <!-- Sidebar -->
+    <aside class="filters">
+      <h3>Filter</h3>
+
+      <div class="filter-group">
+        <h4>Category</h4>
+      </div>
+
+      <div class="filter-group">
+        <h4>Price</h4>
+        <p>KSh 0 - KSh 999</p>
+      </div>
+    </aside>
+
+    <!-- Products -->
+    <div class="products">
+
+      <div class="products-header">
+        <p>154 products</p>
+
+        <select>
+          <option>Sort by: Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+
+        <div class="product-grid">
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/flowers.jpg" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div>         
+            
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Tulips.jfif" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div> 
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/sunflower.jpg" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div> 
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/roses.jpg" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div> 
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/lillies.jpg" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div> 
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/garden.jpg" alt="">
+
+                    <!-- Wishlist -->
+                    <span class="wishlist">❤</span>
+
+                    <!-- 👇 Add Quick View button HERE -->
+                    <button class="quick-view" onclick="openModal(this)">
+                    Quick View
+                    </button>
+
+                    <!-- Add button -->
+                    <button class="add-btn">Add</button>
+                </div>
+
+                <div class="product-info">
+                    <h3>Spring Tulip Bouquet</h3>
+                    <p>Vibrant pink, yellow, and red tulips</p>
+                    <span class="price">$45</span>
+                </div>
+
+            </div> 
+
+         </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="modal" id="productModal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <div class="modal-body">
+      
+      <!-- LEFT: IMAGE -->
+      <div class="modal-img">
+        <img id="modalImg" src="">
+      </div>
+
+      <!-- RIGHT: DETAILS -->
+      <div class="modal-details">
+        <h2 id="modalTitle"></h2>
+        <p class="modal-desc">Fresh, vibrant flowers perfect for any occasion.</p>
+        <h3 class="modal-price">$45</h3>
+
+        <button class="modal-add-btn" onclick="addToCart(this)">Add to Cart</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+let count = 0;
+
+document.querySelectorAll(".add-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    count++;
+    document.getElementById("cart-count").innerText = count;
+  });
+});
+</script>
+
+
+<script>
+function openModal(el) {
+  const card = el.closest(".product-card");
+
+  const img = card.querySelector("img").src;
+  const title = card.querySelector("h3").innerText;
+  const price = card.querySelector(".price").innerText;
+  const desc = card.querySelector("p").innerText;
+
+  document.getElementById("modalImg").src = img;
+  document.getElementById("modalTitle").innerText = title;
+  document.querySelector(".modal-price").innerText = price;
+  document.querySelector(".modal-desc").innerText = desc;
+
+  document.getElementById("productModal").style.display = "flex";
+}
+</script>
+
+<script>
+function closeModal() {
+  document.getElementById("productModal").style.display = "none";
+}
+</script>
+
+<script>
+function addToCart(el) {
+  const title = document.getElementById("modalTitle").innerText;
+
+  alert(title + " added to cart 🛒");
+}
+</script>
+
+<script>
+document.querySelectorAll(".wishlist").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
