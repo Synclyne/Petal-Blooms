@@ -1,8 +1,8 @@
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: #fafafa;
+  margin: 0;
 }
 
 .navbar {
@@ -110,30 +110,145 @@ body {
 /* Layout */
 .shop-container {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  max-width: 1200px;
-  margin: 0 auto;   /* 👈 centers everything */
+  grid-template-columns: 260px 1fr;
   gap: 40px;
-  padding: 40px 20px;
+  padding: 40px;
 }
 
 /* Sidebar */
+/* SIDEBAR */
 .filters {
-  padding-right: 20px;
-  border-right: 1px solid #e5e5e5;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.filters label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .filters h3 {
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
+
+/* FILTER GROUP */
 .filter-group {
   margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.filter-group h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* CHECKBOX STYLE */
+.filters label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* CUSTOM CHECKBOX */
+.filters input[type="checkbox"] {
+  accent-color: #ff2d55;
+  transform: scale(1.1);
+}
+
+.filter-group input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  accent-color: #e91e63;
+}
+
+.filter-group input[type="checkbox"]:checked {
+  background: #ff4d6d;
+  border-color: #ff4d6d;
+}
+
+.filter-group input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+/* LABEL TEXT ALIGN FIX */
+.filter-group label {
+  gap: 10px;
+}
+
+/* PRICE SLIDER */
+.slider {
+  width: 100%;
+  margin: 10px 0;
+  appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+}
+
+/* SLIDER THUMB */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ff4d6d;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* PRICE TEXT */
+#priceValue {
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+#priceRange {
+  width: 100%;
+  margin-top: 10px;
+  accent-color: #ff2d55;
+}
+/* SPACING FIX */
+.filter-group p {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /* Products */
 .products {
-  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.products p {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
 
 .products-header {
@@ -151,20 +266,20 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px; /* more breathing room */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
 }
 
 .product-image {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
 }
 
 .product-image img {
   width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.5s ease;
 }
 
 .quick-view {
@@ -182,11 +297,11 @@ body {
 /* Product card */
 .product-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  animation: fadeInUp 0.6s ease;
+  transition: 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
 .product-card img {
@@ -218,19 +333,21 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+
 .product-info {
-  padding: 15px;
+  padding: 18px;
 }
 
 .product-info h3 {
-  margin: 10px 0 5px;
   font-size: 16px;
+  font-weight: 600;
 }
 
+
 .product-info p {
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 13px;
+  color: #0a0a0a;
+  margin: 6px 0;
 }
 
 .product-info span {
@@ -240,12 +357,25 @@ body {
 
 
 .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .product-card:hover img {
   transform: scale(1.08);
+}
+
+
+.product-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: 0.4s;
+}
+
+.product-card:hover .product-image::after {
+  background: rgba(0,0,0,0.15);
 }
 
 .product-card:hover .add-btn {
@@ -253,22 +383,30 @@ body {
   transform: translateY(0);
 }
 
-
+.price {
+  color: #ff2d55;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 
 .add-btn {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background: #ff4d6d;
-  color: white;
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
   border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-weight: 500;
   cursor: pointer;
+  transition: 0.3s;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #ff2d55;
 }
 
 .wishlist {
@@ -300,13 +438,9 @@ body {
 }
 
 .modal-content {
-  background: white;
   border-radius: 20px;
-  max-width: 800px;
-  width: 90%;
-  padding: 20px;
-  animation: fadeIn 0.3s ease;
-  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
 }
 
 .modal-body {
@@ -342,7 +476,7 @@ body {
 }
 
 .modal-desc {
-  color: #666;
+  color: #080808;
   margin-bottom: 15px;
 }
 
@@ -375,8 +509,14 @@ body {
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 #cart-count {
@@ -389,7 +529,16 @@ body {
 }
 
 
+.count {
+  background: #f3f3f3;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+}
 
+.mobile-nav {
+  display: none;
+}
 
 
 
